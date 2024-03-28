@@ -1,12 +1,2 @@
 #!/bin/bash
-
-# Check if the PYFILE environment variable exists
-if [ -z "$PYFILE" ]; then
-    echo "PYFILE environment variable is not set."
-    exit 1
-fi
-
-# Compile the Python file
-python3 -m compileall "$PYFILE"
-
-echo "Compiling $PYFILE ..."
+python3 -m compileall -b "$PYFILE"
